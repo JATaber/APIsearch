@@ -1,23 +1,34 @@
-var request = new XMLHttpRequest();
+function setup() {
 
-var url = 'https://api.twitch.tv/kraken/search/streams?query=Overwatch';
+    var request = new XMLHttpRequest();
 
-request.open('GET', url, true);
+    var search = 'Overwatch';
 
-request.onload = function () {
-    if (request.status >= 200 && request.status < 400){
-        var data = JSON.parse(request.responseText);
+    console.log(search);
 
-        console.log(data);
-    }else{
-        console.log('response error', request)
-    }
-};
-
-request.onerror = function(){
-
-    console.log('connection error');
-};
+    var url = 'https://api.twitch.tv/kraken/search/streams?client_id=0g2ex58adfewngshnutm5yks4bntml&query='+search+'&limit=12';
 
 
-request.send();
+    request.onload = function () {
+        if (request.status >= 200 && request.status < 400) {
+            var data = JSON.parse(request.responseText);
+
+            console.log(data);
+        } else {
+            console.log('response error')
+        }
+
+        var elForm = document.querySelector('#searchForm');
+    };
+
+    request.onerror = function () {
+
+        console.log('connection error');
+    };
+
+    request.open('GET', url, true);
+    request.send();
+
+}
+
+window.addEventListener('load', setup, false);
