@@ -1,0 +1,23 @@
+{
+  "name": "gulp-apisearch",
+  "version": "1.0.0",
+  "description": "The purpose of this repo is to demonstrate how to make a simple API search",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JATaber/APIsearch.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JATaber/APIsearch/issues"
+  },
+  "homepage": "https://github.com/JATaber/APIsearch#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.1.0"
+  }
+}
