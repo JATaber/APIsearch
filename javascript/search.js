@@ -43,7 +43,7 @@ function searchForm(event) {
 
                     gameInfo[i].getElementsByTagName('a')[0].href= data.streams[i].channel.url;
                     gameInfo[i].getElementsByTagName('img')[0].src = data.streams[i].preview.medium;
-                    gameInfo[i].getElementsByTagName('h3')[0].innerHTML = data.streams[i].channel.name + '<strong>'+ data.streams[i].game + '</strong>';
+                    gameInfo[i].getElementsByTagName('h3')[0].innerHTML = data.streams[i].channel.name + ' <strong>'+ data.streams[i].game + '</strong>';
 
                 };
 

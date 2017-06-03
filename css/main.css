@@ -8,7 +8,7 @@ dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed,
-figure, figcaption, footer, header,
+figure, figcaption, footer, header, section, footer,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
   margin: 0;
@@ -18,7 +18,7 @@ time, mark, audio, video {
   vertical-align: baseline; }
 
 article, aside, details, figcaption, figure,
-footer, header, menu, nav, section {
+footer, header, section, footer, menu, nav, section {
   display: block; }
 
 body {
@@ -40,8 +40,27 @@ table {
 
 .footWrapper {
   background-color: #452D72;
-  background-size: cover; }
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  height: 3.5rem; }
 
 footer {
+  display: block;
   text-align: center;
+  vertical-align: middle;
   color: #C2A8F1; }
+
+footer p {
+  display: block;
+  text-align: center;
+  vertical-align: middle;
+  padding-top: 17px; }
+
+header, section, footer {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto; }
+
+body {
+  font-family: Arial, sans-serif; }
