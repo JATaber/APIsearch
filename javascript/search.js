@@ -1,23 +1,29 @@
 const subForm = document.querySelector('#searchForm');
 const searchInput = document.querySelector('#input');
 
+
 //listen for forms submission
-function searchForm(e) {
+function searchForm(event) {
 
     //stop default submit action
-    e.preventDefault();
+    event.preventDefault();
 
     //take in value from form
     const query = searchInput.value;
 
-    //set aditinal values
+    console.log(query);
+
+    //set additional values
     const limit = "12";
     const client_Id = "0g2ex58adfewngshnutm5yks4bntml";
 
+    var request = new XMLHttpRequest();
+
     //build query string
     const api = 'https://api.twitch.tv/kraken/search/streams?client_id=' + client_Id + '&query=' + query + '&limit=' + limit;
+    console.log(api);
 
-    var request = new XMLHttpRequest();
+
 
     request.onload = function () {
         if (request.status >= 200 && request.status < 400) {
@@ -28,19 +34,22 @@ function searchForm(e) {
             var ele = document.getElementById("results");
 
             if (ele) {
+                var title = document.getElementsByTagName('h2');
                 var gameInfo = document.querySelectorAll("#results article");
+
+                title.innerHTML= "Search results for"+ query;
 
                 for (var i = 0; i < gameInfo.length; i++) {
 
                     gameInfo[i].getElementsByTagName('img')[0].src = data.streams[i].preview.medium;
                     gameInfo[i].getElementsByTagName('h3')[0].innerHTML = data.streams[i].channel.name + '<strong>' + data.streams[i].channel.game + '</strong>';
 
-                }
+                };
 
                 //console.log(data.streams[0]);
 
             } else {
-                console.log('response error')
+                console.log('response error');
             }
 
             request.onerror = function () {
@@ -57,6 +66,8 @@ function searchForm(e) {
         request.open('GET', api, true);
         request.send();
     };
-}
+
+
+};
 
 subForm.addEventListener('submit', searchForm, false);

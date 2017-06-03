@@ -30,7 +30,7 @@ request.onload = function () {
 
             console.log('connection error');
         };
-    };
+    }
   };
 
         request.open('GET', url, true);
