@@ -41,8 +41,9 @@ function searchForm(event) {
 
                 for (var i = 0; i < gameInfo.length; i++) {
 
+                    gameInfo[i].getElementsByTagName('a')[0].href= data.streams[i].channel.url;
                     gameInfo[i].getElementsByTagName('img')[0].src = data.streams[i].preview.medium;
-                    gameInfo[i].getElementsByTagName('h3')[0].innerHTML = data.streams[i].channel.name + '<strong>' + data.streams[i].channel.game + '</strong>';
+                    gameInfo[i].getElementsByTagName('h3')[0].innerHTML = data.streams[i].channel.name + '<strong>'+ data.streams[i].channel.game + '</strong>';
 
                 };
 
@@ -52,10 +53,6 @@ function searchForm(event) {
                 console.log('response error');
             }
 
-            request.onerror = function () {
-
-                console.log('connection error');
-            };
         };
 
         request.onerror = function () {
@@ -63,10 +60,9 @@ function searchForm(event) {
             console.log('connection error');
         };
 
-        request.open('GET', api, true);
-        request.send();
     };
-
+    request.open('GET', api, true);
+    request.send();
 
 };
 
