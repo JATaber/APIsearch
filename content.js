@@ -1,34 +1,37 @@
-function setup() {
+var request = new XMLHttpRequest();
 
-    var request = new XMLHttpRequest();
+var url = 'https://api.twitch.tv/kraken/search/streams?client_id=0g2ex58adfewngshnutm5yks4bntml&query=overwatch&limit=12';
 
-    var search = 'Overwatch';
+request.onload = function () {
+    if (request.status >= 200 && request.status < 400) {
+        var data = JSON.parse(request.responseText);
 
-    console.log(search);
+        console.log(data);
 
-    var url = 'https://api.twitch.tv/kraken/search/streams?client_id=0g2ex58adfewngshnutm5yks4bntml&query='+search+'&limit=12';
+        var ele = document.getElementById("results");
 
+        if (ele) {
+            var gameInfo = document.querySelectorAll("#results article");
 
-    request.onload = function () {
-        if (request.status >= 200 && request.status < 400) {
-            var data = JSON.parse(request.responseText);
+            for (var i = 0; i < gameInfo.length; i++) {
 
-            console.log(data);
+                gameInfo[i].getElementsByTagName('img')[0].src = data.streams[i].preview.medium;
+                gameInfo[i].getElementsByTagName('h3')[0].innerHTML = data.streams[i].channel.name + '<strong>'+ data.streams[i].channel.game + '</strong>';
+
+            }
+
+            //console.log(data.streams[0]);
+
         } else {
             console.log('response error')
         }
 
-        var elForm = document.querySelector('#searchForm');
+        request.onerror = function () {
+
+            console.log('connection error');
+        };
     };
+  };
 
-    request.onerror = function () {
-
-        console.log('connection error');
-    };
-
-    request.open('GET', url, true);
-    request.send();
-
-}
-
-window.addEventListener('load', setup, false);
+        request.open('GET', url, true);
+        request.send();
