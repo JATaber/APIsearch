@@ -15,9 +15,9 @@ request.onload = function () {
 
             for (var i = 0; i < gameInfo.length; i++) {
 
-                gameInfo[i].getElementsByTagName('a')[0].href= data.streams[i].channel.url;
+                gameInfo[i].getElementsByTagName('a')[0].href = data.streams[i].channel.url;
                 gameInfo[i].getElementsByTagName('img')[0].src = data.streams[i].preview.medium;
-                gameInfo[i].getElementsByTagName('h3')[0].innerHTML = data.streams[i].channel.name + '<strong>'+ data.streams[i].channel.game + '</strong>';
+                gameInfo[i].getElementsByTagName('h3')[0].innerHTML = data.streams[i].channel.name + '<strong>' + data.streams[i].channel.game + '</strong>';
 
             }
 
@@ -30,9 +30,11 @@ request.onload = function () {
         request.onerror = function () {
 
             console.log('connection error');
-        };
+        }
+        //request close
     }
-  };
+//onload close
+}
 
         request.open('GET', url, true);
         request.send();

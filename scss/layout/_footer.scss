@@ -1,0 +1,11 @@
+@import '../helpers/_variables.scss';
+
+.footWrapper{
+  background-color: $footer-bg-color;
+  background-size: cover;
+}
+
+footer{
+  text-align: center;
+  color: $font-color;
+}

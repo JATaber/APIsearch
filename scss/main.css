@@ -38,4 +38,12 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+.footWrapper {
+  background-color: #452D72;
+  background-size: cover; }
+
+footer {
+  text-align: center;
+  color: #C2A8F1; }
+
 /*# sourceMappingURL=main.css.map */
