@@ -3,6 +3,7 @@
 
 .navWrapper {
   height: 40rem;
-  background: url('../../images/Gaming_Zone.jpeg') no-repeat;
-  background-size: auto;
+  background: $backgroundImage;
+  background-size: cover;
+  display: block;
 }

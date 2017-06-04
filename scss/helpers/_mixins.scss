@@ -1,4 +1,3 @@
-@mixin block-settings{
-  display:block;
-  margin: 0;
+@mixin border-radius($radius){
+  border-radius: $radius;
 }
