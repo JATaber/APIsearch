@@ -104,8 +104,8 @@ h1{
   input[type=submit]{
     position: relative;
     text-indent: -9999px;
-    width: 5rem;
-    height: 5rem;
+    width: 50px;
+    height: 50px;
     background: $search-btn;
     background-color: white;
     border: none;
@@ -118,8 +118,8 @@ h1{
 .searchForm{
   input[type=submit]:hover{
     background: $search-btn-hover;
-    width: 5rem;
-    height: 5rem;
+    width: 50px;
+    height: 50px;
   }
 }
 
