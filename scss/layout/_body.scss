@@ -6,7 +6,6 @@ html{
 }
 
 header{
-  border: 2px solid white;
   position: inherit;
   max-width: 1200px;
   margin-left: auto;
@@ -87,7 +86,6 @@ h1{
 
 .searchForm{
   label{
-    border: 2px solid red;
     display: inline-block;
     background-color: $bg-color;
     font-size: $font-sizeP;
@@ -97,10 +95,112 @@ h1{
 
   input[type=text]{
     display: inline-block;
-    border: 2px solid green;
+    height: 5rem;
+    font-size: $font-sizeH3;
+    width: 80rem;
+    border: none;
   }
 
   input[type=submit]{
-
+    position: relative;
+    text-indent: -9999px;
+    width: 5rem;
+    height: 5rem;
+    background: $search-btn;
+    background-color: white;
+    border: none;
+    margin:0;
+    left: -3px;
+    bottom: 9px;
   }
 }
+
+.searchForm{
+  input[type=submit]:hover{
+    background: $search-btn-hover;
+  }
+}
+
+
+h2{
+  display: block;
+  float: left;
+  margin-right: 400px;
+  margin-top: 4rem;
+  padding: 5px;
+  background-color: $bg-color;
+  color: $light-font-color;
+  font-size: $font-h1-size;
+}
+#results{
+  text-align: center;
+}
+
+.button {
+  display: inline-block;
+  text-align: center;
+  font-size: $font-sizeP;
+  margin-bottom: 20px;
+  @include border-radius(5px);
+  background-color: $article-bg-color;
+  text-decoration: none;
+  color: $light-font-color;
+  padding: 10px;
+}
+
+.button:hover{
+  background-color: $bg-color;
+}
+
+
+article{
+  display: inline-block;
+  margin: 39px;
+}
+
+article{
+  a{
+    text-decoration: none;
+    background-color: $article-bg-color;
+  }
+
+  h3{
+    font-size: $font-sizeP;
+    color: $light-font-color;
+    background-color: $article-bg-color;
+    padding: 10px;
+    text-align: left;
+  }
+  strong{
+    font-size: $font-sizeP;
+    color: $dark-font-color;
+  }
+}
+
+strong::before{
+  content:"\A";
+  white-space: pre;
+}
+
+article{
+  h3:hover{
+    background-color: $bg-color;
+  }
+}
+
+footer{
+  padding-top: 1.5rem;
+  font-size: $font-sizeP;
+  text-align: center;
+  color: $light-font-color;
+}
+
+footer{
+  p{
+    margin-top: 1rem;
+  }
+  a{
+    color: $light-font-color;
+  }
+}
+

@@ -1,4 +1,4 @@
-const subForm = document.querySelector('#searchForm');
+const subForm = document.querySelector('.searchForm');
 const searchInput = document.querySelector('#input');
 
 
@@ -34,12 +34,12 @@ function searchForm(event) {
             var ele = document.getElementById("results");
 
             if (ele) {
-                var title = document.querySelector('h2');
                 var gameInfo = document.querySelectorAll("#results article");
+                var title = document.getElementsByTagName('h2');
+
+                console.log(data.streams.length);
 
                 title.innerHTML= "Search results for "+ data.streams[1].game;
-
-                console.log(gameInfo.length);
 
                 for (var i = 0; i < gameInfo.length; i++) {
 
@@ -49,20 +49,21 @@ function searchForm(event) {
 
                 }
 
-                //console.log(data.streams[0]);
+                console.log(data.streams[0]);
 
+            } else {
+                console.log('response error');
             }
+
+            request.onerror = function () {
+
+                console.log('connection error');
+            };
+            //request close
         }
-
-        request.onerror = function () {
-
-            console.log('connection error');
-
-            //onerror end
-        };
-
-    //onload function end
+//onload close
     };
+
     request.open('GET', api, true);
     request.send();
 

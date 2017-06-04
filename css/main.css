@@ -6,7 +6,6 @@ html {
   font-size: 62.5%; }
 
 header, section, footer {
-  border: 2px solid white;
   position: inherit;
   max-width: 1200px;
   margin-left: auto;
@@ -59,7 +58,6 @@ h1 {
   display: block; }
 
 .searchForm label {
-  border: 2px solid red;
   display: inline-block;
   background-color: #000;
   font-size: 20px;
@@ -67,10 +65,97 @@ h1 {
 
 .searchForm input[type=text] {
   display: inline-block;
-  border: 2px solid green; }
+  height: 5rem;
+  font-size: 35px;
+  width: 80rem;
+  border: none; }
+
+.searchForm input[type=submit] {
+  position: relative;
+  text-indent: -9999px;
+  width: 5rem;
+  height: 5rem;
+  background: url("../images-icons/icons8-Search Filled.png") no-repeat;
+  background-color: white;
+  border: none;
+  margin: 0;
+  left: -3px;
+  bottom: 9px; }
+
+.searchForm input[type=submit]:hover {
+  background: url("../images-icons/icons8-Search Filled-Hoverpng.png") no-repeat; }
+
+h2 {
+  display: block;
+  float: left;
+  margin-right: 400px;
+  margin-top: 4rem;
+  padding: 5px;
+  background-color: #000;
+  color: #C2A8F1;
+  font-size: 50px; }
+
+#results {
+  text-align: center; }
+
+.button {
+  display: inline-block;
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  background-color: #452D72;
+  text-decoration: none;
+  color: #C2A8F1;
+  padding: 10px; }
+
+.button:hover {
+  background-color: #000; }
+
+article {
+  display: inline-block;
+  margin: 39px; }
+
+article a {
+  text-decoration: none;
+  background-color: #452D72; }
+
+article h3 {
+  font-size: 20px;
+  color: #C2A8F1;
+  background-color: #452D72;
+  padding: 10px;
+  text-align: left; }
+
+article strong {
+  font-size: 20px;
+  color: #907DB4; }
+
+strong::before {
+  content: "\A";
+  white-space: pre; }
+
+article h3:hover {
+  background-color: #000; }
+
+footer {
+  padding-top: 1.5rem;
+  font-size: 20px;
+  text-align: center;
+  color: #C2A8F1; }
+
+footer p {
+  margin-top: 1rem; }
+
+footer a {
+  color: #C2A8F1; }
 
 .navWrapper {
   height: 40rem;
   background: url("../images-icons/Gaming_Zone.jpeg") no-repeat;
   background-size: cover;
   display: block; }
+
+.footWrapper {
+  background-color: #000;
+  height: 9.5rem; }
