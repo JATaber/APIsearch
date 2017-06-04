@@ -111,7 +111,7 @@ h1{
     border: none;
     margin:0;
     left: -3px;
-    bottom: 8px;
+    bottom: 9px;
   }
 }
 
@@ -158,6 +158,7 @@ h2{
 article{
   display: inline-block;
   margin: 39px;
+  max-width: 320px;
 }
 
 article{
@@ -172,6 +173,7 @@ article{
     background-color: $article-bg-color;
     padding: 10px;
     text-align: left;
+    @include ellipsis;
   }
   strong{
     font-size: $font-sizeP;

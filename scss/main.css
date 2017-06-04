@@ -77,7 +77,7 @@ h1 {
   border: none;
   margin: 0;
   left: -3px;
-  bottom: 8px; }
+  bottom: 9px; }
 
 .searchForm input[type=submit]:hover {
   background: url("../images-icons/icons8-Search Filled-Hoverpng.png") no-repeat;
@@ -113,7 +113,8 @@ h2 {
 
 article {
   display: inline-block;
-  margin: 39px; }
+  margin: 39px;
+  max-width: 320px; }
 
 article a {
   text-decoration: none;
@@ -123,7 +124,10 @@ article h3 {
   color: #C2A8F1;
   background-color: #452D72;
   padding: 10px;
-  text-align: left; }
+  text-align: left;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis; }
 article strong {
   font-size: 20px;
   color: #907DB4; }
