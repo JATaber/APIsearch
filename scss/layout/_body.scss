@@ -111,13 +111,15 @@ h1{
     border: none;
     margin:0;
     left: -3px;
-    bottom: 9px;
+    bottom: 8px;
   }
 }
 
 .searchForm{
   input[type=submit]:hover{
     background: $search-btn-hover;
+    width: 5rem;
+    height: 5rem;
   }
 }
 
