@@ -1,9 +1,15 @@
 @import '../helpers/_variables';
+@import '../helpers/_mixins.scss';
+
+html{
+  font-size: 62.5%;
+}
 
 header{
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
+  border: 2px solid white;
 }
 
 section{
@@ -16,4 +22,9 @@ footer{
 
 body{
   font-family: $font-stack;
+  background-color: $body-bgColor;
+}
+
+header{
+
 }

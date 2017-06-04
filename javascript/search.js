@@ -39,31 +39,34 @@ function searchForm(event) {
 
                 title.innerHTML= "Search results for "+ data.streams[1].game;
 
+                console.log(gameInfo.length);
+
                 for (var i = 0; i < gameInfo.length; i++) {
 
                     gameInfo[i].getElementsByTagName('a')[0].href= data.streams[i].channel.url;
                     gameInfo[i].getElementsByTagName('img')[0].src = data.streams[i].preview.medium;
                     gameInfo[i].getElementsByTagName('h3')[0].innerHTML = data.streams[i].channel.name + ' <strong>'+ data.streams[i].game + '</strong>';
 
-                };
+                }
 
                 //console.log(data.streams[0]);
 
-            } else {
-                console.log('response error');
             }
-
-        };
+        }
 
         request.onerror = function () {
 
             console.log('connection error');
+
+            //onerror end
         };
 
+    //onload function end
     };
     request.open('GET', api, true);
     request.send();
 
-};
+    //search function end
+}
 
 subForm.addEventListener('submit', searchForm, false);

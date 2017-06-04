@@ -1,6 +1,6 @@
 var request = new XMLHttpRequest();
 
-var url = 'https://api.twitch.tv/kraken/search/streams?client_id=0g2ex58adfewngshnutm5yks4bntml&query=overwatch&limit=12';
+var url = "https://api.twitch.tv/kraken/search/streams?client_id=0g2ex58adfewngshnutm5yks4bntml&query=overwatch&limit=12";
 
 request.onload = function () {
     if (request.status >= 200 && request.status < 400) {
@@ -11,30 +11,38 @@ request.onload = function () {
         var ele = document.getElementById("results");
 
         if (ele) {
-            var gameInfo = document.querySelectorAll("#results article");
+            var gameInfo = document.querySelector("#results");
 
-            for (var i = 0; i < gameInfo.length; i++) {
+            console.log(data.streams.length);
 
-                gameInfo[i].getElementsByTagName('a')[0].href = data.streams[i].channel.url;
-                gameInfo[i].getElementsByTagName('img')[0].src = data.streams[i].preview.medium;
-                gameInfo[i].getElementsByTagName('h3')[0].innerHTML = data.streams[i].channel.name + ' <strong>' + data.streams[i].channel.game + '</strong>';
+            var searchData = '<article>';
+
+            for (var i = 0; i < data.streams.length; i++) {
+
+                searchData += '<a href="' + data.streams[i].channel.url + '" target="_blank">';
+                searchData += '<img class="medium" src=" ' + data.streams[i].preview.medium + ' ">';
+                searchData += '<h3>' + data.streams[i].channel.name + ' <strong>' + data.streams[i].channel.game + '</strong></h3>';
+                searchData += '</a>';
+                searchData += '</article>';
 
             }
 
-            //console.log(data.streams[0]);
+            searchData += '<a href="https://twitch.tv">View more on Twitch</a>';
+            gameInfo.insertAdjacentHTML('beforeEnd', searchData);
+
 
         } else {
-            console.log('response error')
+            console.log('response error');
         }
 
         request.onerror = function () {
 
             console.log('connection error');
-        }
+        };
         //request close
     }
 //onload close
-}
+};
 
         request.open('GET', url, true);
         request.send();
