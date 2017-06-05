@@ -73,8 +73,8 @@ h1 {
 .searchForm input[type=submit] {
   position: relative;
   text-indent: -9999px;
-  width: 5rem;
-  height: 5rem;
+  width: 50px;
+  height: 50px;
   background: url("../images-icons/icons8-Search Filled.png") no-repeat;
   background-color: white;
   border: none;
@@ -84,8 +84,8 @@ h1 {
 
 .searchForm input[type=submit]:hover {
   background: url("../images-icons/icons8-Search Filled-Hoverpng.png") no-repeat;
-  width: 5rem;
-  height: 5rem; }
+  width: 50px;
+  height: 50px; }
 
 h2 {
   display: block;

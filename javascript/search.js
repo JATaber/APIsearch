@@ -35,11 +35,11 @@ function searchForm(event) {
 
             if (ele) {
                 var gameInfo = document.querySelectorAll("#results article");
-                var title = document.getElementsByTagName('h2');
+                var title = document.querySelector('#resultsInfo');
 
                 console.log(data.streams.length);
 
-                title.innerHTML= "Search results for "+ data.streams[1].game;
+                title.innerHTML= "Search results for "+ query;
 
                 for (var i = 0; i < gameInfo.length; i++) {
 
