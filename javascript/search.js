@@ -14,7 +14,7 @@ function searchForm(event) {
     console.log(query);
 
     //set additional values
-    const limit = "12";
+    const limit = "13";
     const client_Id = "0g2ex58adfewngshnutm5yks4bntml";
 
     var request = new XMLHttpRequest();

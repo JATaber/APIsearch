@@ -5,11 +5,15 @@
 html {
   font-size: 62.5%; }
 
-header, section, footer {
+header, section {
   position: inherit;
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto; }
+
+footer {
+  background-color: #000;
+  height: 9.5rem; }
 
 body {
   font-family: Arial, sans-serif;
@@ -27,7 +31,7 @@ body {
 
 h1 {
   color: #C2A8F1;
-  font-size: 50px;
+  font-size: 5rem;
   margin-left: 50px;
   padding-left: 10px; }
 
@@ -39,32 +43,29 @@ h1 {
   display: inline-block;
   list-style-type: none;
   color: #C2A8F1;
-  font-size: 50px;
+  font-size: 5rem;
   padding-left: 10px; }
 .nav li:first-child {
   color: #907DB4; }
 
 .search {
-  height: 33.7rem;
-  position: relative; }
+  height: 33.7rem; }
 
 .searchForm {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-right: -50%;
-  transform: translate(-50%, -50%);
-  display: block; }
+  display: block;
+  padding-top: 12rem;
+  margin-left: auto;
+  margin-right: auto; }
 
 .searchForm label {
-  display: inline-block;
   background-color: #000;
-  font-size: 20px;
-  color: #C2A8F1; }
+  font-size: 2rem;
+  color: #C2A8F1;
+  margin: 0 7rem 0 0; }
 .searchForm input[type=text] {
   display: inline-block;
   height: 5rem;
-  font-size: 35px;
+  font-size: 3.5rem;
   width: 80rem;
   border: none; }
 .searchForm input[type=submit] {
@@ -76,8 +77,12 @@ h1 {
   background-color: white;
   border: none;
   margin: 0;
-  left: -3px;
+  right: 3px;
   bottom: 9px; }
+
+.searchForm input[type=text]::before {
+  content: "\A";
+  white-space: pre; }
 
 .searchForm input[type=submit]:hover {
   background: url("../images-icons/icons8-Search Filled-Hoverpng.png") no-repeat;
@@ -92,7 +97,7 @@ h2 {
   padding: 5px;
   background-color: #000;
   color: #C2A8F1;
-  font-size: 50px; }
+  font-size: 5rem; }
 
 #results {
   text-align: center; }
@@ -100,7 +105,7 @@ h2 {
 .button {
   display: inline-block;
   text-align: center;
-  font-size: 20px;
+  font-size: 2rem;
   margin-bottom: 20px;
   border-radius: 5px;
   background-color: #452D72;
@@ -120,7 +125,7 @@ article a {
   text-decoration: none;
   background-color: #452D72; }
 article h3 {
-  font-size: 20px;
+  font-size: 2rem;
   color: #C2A8F1;
   background-color: #452D72;
   padding: 10px;
@@ -129,7 +134,7 @@ article h3 {
   white-space: nowrap;
   text-overflow: ellipsis; }
 article strong {
-  font-size: 20px;
+  font-size: 2rem;
   color: #907DB4; }
 
 strong::before {
@@ -141,7 +146,7 @@ article h3:hover {
 
 footer {
   padding-top: 1.5rem;
-  font-size: 20px;
+  font-size: 2rem;
   text-align: center;
   color: #C2A8F1; }
 
@@ -156,8 +161,11 @@ footer a {
   background-size: cover;
   display: block; }
 
-.footWrapper {
-  background-color: #000;
-  height: 9.5rem; }
+/*
+.footWrapper{
+  background-color: $bg-color;
+  height: 9.5rem;
+}
+*/
 
 /*# sourceMappingURL=main.css.map */

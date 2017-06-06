@@ -11,33 +11,38 @@ request.onload = function () {
         var ele = document.getElementById("results");
 
         if (ele) {
-            var gameInfo = document.querySelectorAll("#results article");
+            var gameInfo = document.querySelector("#results");
 
             console.log(data.streams.length);
 
+            var searchData = '<article>';
 
-            for (var i = 0; i < gameInfo.length; i++) {
+            for (var i = 0; i < data.streams.length; i++) {
 
-                gameInfo[i].getElementsByTagName('a')[0].href= data.streams[i].channel.url;
-                gameInfo[i].getElementsByTagName('img')[0].src = data.streams[i].preview.medium;
-                gameInfo[i].getElementsByTagName('h3')[0].innerHTML = data.streams[i].channel.name + ' <strong>'+ data.streams[i].game + '</strong>';
-
+                //searchData = '<article>';
+                searchData += '<a href="'+ data.streams[i].channel.url +'" target="_blank">';
+                searchData +=  '<img src='+ data.streams[i].preview.medium +' alt="preview">';
+                searchData += '<h3>'+ data.streams[i].channel.name +'<strong>'+ data.streams[i].channel.game + '</strong></h3>';
+                searchData += '</a>';
+                searchData += '</article>';
             }
+
+            gameInfo.insertAdjacentHTML('beforeEnd', searchData);
 
             console.log(data.streams[0]);
 
         } else {
-            console.log('response error');
+            console.log('response error')
         }
 
         request.onerror = function () {
 
             console.log('connection error');
-        };
+        }
         //request close
     }
 //onload close
-};
+}
 
-request.open('GET', url, true);
-request.send();
+        request.open('GET', url, true);
+        request.send();
