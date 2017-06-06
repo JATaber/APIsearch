@@ -56,7 +56,8 @@ h1 {
   display: block;
   padding-top: 12rem;
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+  position: relative; }
 
 .searchForm label {
   background-color: #000;

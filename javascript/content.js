@@ -15,11 +15,11 @@ request.onload = function () {
 
             console.log(data.streams.length);
 
-            var searchData = '<article>';
+            var searchData= '';
 
             for (var i = 0; i < data.streams.length; i++) {
 
-                //searchData = '<article>';
+                searchData += '<article>';
                 searchData += '<a href="'+ data.streams[i].channel.url +'" target="_blank">';
                 searchData +=  '<img src='+ data.streams[i].preview.medium +' alt="preview">';
                 searchData += '<h3>'+ data.streams[i].channel.name +'<strong>'+ data.streams[i].channel.game + '</strong></h3>';
@@ -38,11 +38,11 @@ request.onload = function () {
         request.onerror = function () {
 
             console.log('connection error');
-        }
+        };
         //request close
     }
 //onload close
-}
+};
 
         request.open('GET', url, true);
         request.send();
