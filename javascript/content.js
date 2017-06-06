@@ -1,6 +1,6 @@
 var request = new XMLHttpRequest();
 
-var url = 'https://api.twitch.tv/kraken/search/streams?client_id=0g2ex58adfewngshnutm5yks4bntml&query=league&limit=12';
+var url = 'https://api.twitch.tv/kraken/search/streams?client_id=0g2ex58adfewngshnutm5yks4bntml&query=league&limit=13';
 
 request.onload = function () {
     if (request.status >= 200 && request.status < 400) {
@@ -28,6 +28,10 @@ request.onload = function () {
             }
 
             gameInfo.insertAdjacentHTML('beforeEnd', searchData);
+
+            var link = '<br><a class="button" href="https://twitch.tv">View more on Twitch</a>';
+
+            gameInfo.insertAdjacentHTML('beforeEnd', link);
 
             console.log(data.streams[0]);
 

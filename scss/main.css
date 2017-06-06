@@ -53,37 +53,28 @@ h1 {
 
 .searchForm {
   display: block;
-  padding-top: 12rem;
+  width: 85.5rem;
+  margin-top: 12rem;
   margin-left: auto;
-  margin-right: auto;
-  position: relative; }
+  margin-right: auto; }
 
 .searchForm label {
   background-color: #000;
   font-size: 2rem;
   color: #C2A8F1;
-  margin: 0 7rem 0 0; }
+  margin: 0 7rem 0 0;
+  border: 1px solid transparent; }
 .searchForm input[type=text] {
-  display: inline-block;
   height: 5rem;
   font-size: 3.5rem;
   width: 80rem;
   border: none; }
 .searchForm input[type=submit] {
-  position: relative;
   text-indent: -9999px;
-  width: 50px;
-  height: 50px;
-  background: url("../images-icons/icons8-Search Filled.png") no-repeat;
-  background-color: white;
-  border: none;
-  margin: 0;
-  right: 3px;
-  bottom: 9px; }
-
-.searchForm input[type=text]::before {
-  content: "\A";
-  white-space: pre; }
+  width: 5rem;
+  height: 5rem;
+  background: url("../images-icons/icons8-Search Filled.png") no-repeat white;
+  border: 2px solid red; }
 
 .searchForm input[type=submit]:hover {
   background: url("../images-icons/icons8-Search Filled-Hoverpng.png") no-repeat;

@@ -76,10 +76,10 @@ h1{
 
 .searchForm{
   display: block;
-  padding-top: 12rem;
+  width: 85.5rem;
+  margin-top: 12rem;
   margin-left: auto;
   margin-right: auto;
-  position: relative;
 }
 
 .searchForm{
@@ -88,12 +88,10 @@ h1{
     font-size: $font-sizeP;
     color: $light-font-color;
     margin: 0 7rem 0 0;
-
-
+    border: 1px solid transparent;
   }
 
   input[type=text]{
-    display: inline-block;
     height: 5rem;
     font-size: $font-sizeH3;
     width: 80rem;
@@ -101,23 +99,11 @@ h1{
   }
 
   input[type=submit]{
-    position: relative;
     text-indent: -9999px;
-    width: 50px;
-    height: 50px;
-    background: $search-btn;
-    background-color: white;
-    border: none;
-    margin:0;
-    right: 3px;
-    bottom: 9px;
-  }
-}
-
-.searchForm {
-  input[type=text]::before {
-    content: "\A";
-    white-space: pre;
+    width: 5rem;
+    height: 5rem;
+    background: $search-btn white;
+    border: 2px solid red;
   }
 }
 
