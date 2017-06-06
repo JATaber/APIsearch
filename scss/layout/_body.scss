@@ -76,7 +76,7 @@ h1{
 
 .searchForm{
   display: block;
-  width: 85.5rem;
+  width: 85rem;
   margin-top: 12rem;
   margin-left: auto;
   margin-right: auto;
@@ -89,13 +89,15 @@ h1{
     color: $light-font-color;
     margin: 0 7rem 0 0;
     border: 1px solid transparent;
+    float: left;
   }
 
   input[type=text]{
     height: 5rem;
     font-size: $font-sizeH3;
     width: 80rem;
-    border-right: none;
+    border: none;
+    float: left;
   }
 
   input[type=submit]{
@@ -103,7 +105,8 @@ h1{
     width: 5rem;
     height: 5rem;
     background: $search-btn white;
-    border-left: none;
+    border: none;
+    float: right;
   }
 }
 

@@ -54,7 +54,7 @@ h1 {
 
 .searchForm {
   display: block;
-  width: 85.5rem;
+  width: 85rem;
   margin-top: 12rem;
   margin-left: auto;
   margin-right: auto; }
@@ -64,20 +64,23 @@ h1 {
   font-size: 2rem;
   color: #C2A8F1;
   margin: 0 7rem 0 0;
-  border: 1px solid transparent; }
+  border: 1px solid transparent;
+  float: left; }
 
 .searchForm input[type=text] {
   height: 5rem;
   font-size: 3.5rem;
   width: 80rem;
-  border-right: none; }
+  border: none;
+  float: left; }
 
 .searchForm input[type=submit] {
   text-indent: -9999px;
   width: 5rem;
   height: 5rem;
   background: url("../images-icons/icons8-Search Filled.png") no-repeat white;
-  border-left: none; }
+  border: none;
+  float: right; }
 
 .searchForm input[type=submit]:hover {
   background: url("../images-icons/icons8-Search Filled-Hoverpng.png") no-repeat;
