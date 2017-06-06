@@ -68,13 +68,13 @@ h1 {
   height: 5rem;
   font-size: 3.5rem;
   width: 80rem;
-  border: none; }
+  border-right: none; }
 .searchForm input[type=submit] {
   text-indent: -9999px;
   width: 5rem;
   height: 5rem;
   background: url("../images-icons/icons8-Search Filled.png") no-repeat white;
-  border: 2px solid red; }
+  border-left: none; }
 
 .searchForm input[type=submit]:hover {
   background: url("../images-icons/icons8-Search Filled-Hoverpng.png") no-repeat;

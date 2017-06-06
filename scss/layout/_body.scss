@@ -95,7 +95,7 @@ h1{
     height: 5rem;
     font-size: $font-sizeH3;
     width: 80rem;
-    border: none;
+    border-right: none;
   }
 
   input[type=submit]{
@@ -103,7 +103,7 @@ h1{
     width: 5rem;
     height: 5rem;
     background: $search-btn white;
-    border: 2px solid red;
+    border-left: none;
   }
 }
 
