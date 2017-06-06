@@ -1,6 +1,6 @@
 var request = new XMLHttpRequest();
 
-var url = 'https://api.twitch.tv/kraken/search/streams?client_id=0g2ex58adfewngshnutm5yks4bntml&query=league&limit=13';
+var url = 'https://api.twitch.tv/kraken/search/streams?client_id=0g2ex58adfewngshnutm5yks4bntml&query=league&limit=12';
 
 request.onload = function () {
     if (request.status >= 200 && request.status < 400) {
