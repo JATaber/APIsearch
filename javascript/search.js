@@ -23,8 +23,6 @@ function searchForm(event) {
     const api = 'https://api.twitch.tv/kraken/search/streams?client_id=' + client_Id + '&query=' + query + '&limit=' + limit;
     console.log(api);
 
-
-
     request.onload = function () {
         if (request.status >= 200 && request.status < 400) {
             var data = JSON.parse(request.responseText);
@@ -34,26 +32,34 @@ function searchForm(event) {
             var ele = document.getElementById("results");
 
             if (ele) {
-                var gameInfo = document.querySelectorAll("#results article");
+                var gameInfo = document.querySelector("#searchResults");
                 var title = document.querySelector('#resultsInfo');
-
+                
                 console.log(data.streams.length);
 
+                var searchData='';
 
+                gameInfo.innerHTML='';
+
+                title.innerHTML= 'results for '+query;
 
                 if(data.streams.length >0){
-                    for (var i = 0; i < gameInfo.length; i++) {
 
-                        title.innerHTML= "Search results for "+ query;
-                        gameInfo[i].getElementsByTagName('a')[0].href= data.streams[i].channel.url;
-                        gameInfo[i].getElementsByTagName('img')[0].src = data.streams[i].preview.medium;
-                        gameInfo[i].getElementsByTagName('h3')[0].innerHTML = data.streams[i].channel.name + ' <strong>'+ data.streams[i].game + '</strong>';
+                    document.querySelector("#userFeedback").innerHTML = '';
 
+                    for (var i = 0; i < data.streams.length; i++)  {
+                        searchData += '<article>';
+                        searchData += '<a href="' + data.streams[i].channel.url + '" target="_blank">';
+                        searchData += '<img src=' + data.streams[i].preview.medium + ' alt="preview">';
+                        searchData += '<h3>' + data.streams[i].channel.name + '<strong>' + data.streams[i].channel.game + '</strong></h3>';
+                        searchData += '</a>';
+                        searchData += '</article>';
                     }
                 }else{
                     document.querySelector("#userFeedback").innerHTML = "Your search results didn't return anything";
                 }
 
+                gameInfo.insertAdjacentHTML('beforeEnd', searchData);
                 console.log(data.streams[0]);
 
             } else {

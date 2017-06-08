@@ -13,13 +13,14 @@ gulp.task('scss', function(){
     var processors = [
         autoprefixer({ browsers:['last 2 versions']}),
     ];
+
    return gulp.src('./scss/*.scss')
        .pipe(sass())
-       .pip(postcss(processors))
+       .pipe(postcss(processors))
        .pipe(gulp.dest('./css'))
        .pipe(browserSync.reload({
            stream:true
-       }))
+       }));
 });
 
 gulp.task('browser-sync', function(){
@@ -27,9 +28,9 @@ gulp.task('browser-sync', function(){
        server: {
            baseDir: "./"
        }
-   })
+   });
 });
 
 gulp.task('watch', ['browser-sync', 'scss'],function(){
-    gulp.watch('./scss/**/*.scss', ["scss"])
+    gulp.watch('./scss/**/*.scss', ["scss"]);
 });

@@ -8,11 +8,11 @@ request.onload = function () {
 
         console.log(data);
 
-        var ele = document.getElementById("results");
+        var ele = document.getElementById("searchResults");
 
 
         if (ele) {
-            var gameInfo = document.querySelector("#results");
+            var gameInfo = document.querySelector("#searchResults");
 
             console.log(data.streams.length);
 
@@ -36,9 +36,6 @@ request.onload = function () {
 
             gameInfo.insertAdjacentHTML('beforeEnd', searchData);
 
-            var link = '<br><a class="button" href="https://twitch.tv">View more on Twitch</a>';
-
-            gameInfo.insertAdjacentHTML('beforeEnd', link);
 
             console.log(data.streams[0]);
 
