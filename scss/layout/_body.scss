@@ -32,9 +32,10 @@ body{
 
 .logo{
   @extend %header;
-  height: 5rem;
-  width: 5rem;
+  height: 4rem;
+  width: 4rem;
   background: $logoicon;
+  background-size: cover;
   text-indent: -9999px;
   position: absolute;
 }
@@ -116,6 +117,13 @@ h1{
     width: 50px;
     height: 50px;
   }
+
+  #userFeedback{
+    color: red;
+    float: left;
+    font-size: $font-sizeP;
+    background-color: black;
+  }
 }
 
 
@@ -138,7 +146,7 @@ h2{
   text-align: center;
   font-size: $font-sizeP;
   margin-bottom: 20px;
-  @include border-radius(5px);
+  border-radius: 5px;
   background-color: $article-bg-color;
   text-decoration: none;
   color: $light-font-color;
@@ -162,13 +170,19 @@ article{
     background-color: $article-bg-color;
   }
 
+  %ellipsis{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
   h3{
     font-size: $font-sizeP;
     color: $light-font-color;
     background-color: $article-bg-color;
     padding: 10px;
     text-align: left;
-    @include ellipsis;
+    @extend %ellipsis;
   }
   strong{
     font-size: $font-sizeP;
@@ -177,8 +191,7 @@ article{
 }
 
 strong::before{
-  content:"\A";
-  white-space: pre;
+  @include lineBreak;
 }
 
 article{

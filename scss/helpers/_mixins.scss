@@ -1,9 +1,16 @@
-@mixin border-radius($radius){
-  border-radius: $radius;
+@mixin lineBreak{
+  content:"\A";
+  white-space: pre;
 }
 
-@mixin ellipsis{
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
+@mixin mq($size){
+  @if $size == small{
+    @media (min-width: 300px){@content;}
+  }
+  @else if $size == medium{
+    @media (min-width: 600px){@content;}
+  }
+  @else if $size == large{
+    @media (min-width: 800px){@content;}
+  }
 }

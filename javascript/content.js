@@ -10,6 +10,7 @@ request.onload = function () {
 
         var ele = document.getElementById("results");
 
+
         if (ele) {
             var gameInfo = document.querySelector("#results");
 
@@ -17,15 +18,21 @@ request.onload = function () {
 
             var searchData= '';
 
-            for (var i = 0; i < data.streams.length; i++) {
+            if(data.streams.length > 0){
 
-                searchData += '<article>';
-                searchData += '<a href="'+ data.streams[i].channel.url +'" target="_blank">';
-                searchData +=  '<img src='+ data.streams[i].preview.medium +' alt="preview">';
-                searchData += '<h3>'+ data.streams[i].channel.name +'<strong>'+ data.streams[i].channel.game + '</strong></h3>';
-                searchData += '</a>';
-                searchData += '</article>';
+                for (var i = 0; i < data.streams.length; i++)  {
+                    searchData += '<article>';
+                    searchData += '<a href="' + data.streams[i].channel.url + '" target="_blank">';
+                    searchData += '<img src=' + data.streams[i].preview.medium + ' alt="preview">';
+                    searchData += '<h3>' + data.streams[i].channel.name + '<strong>' + data.streams[i].channel.game + '</strong></h3>';
+                    searchData += '</a>';
+                    searchData += '</article>';
+                    }
+            }else{
+                    document.querySelector("#userFeedback").innerHTML = "Your search results didn't return anything";
+
             }
+
 
             gameInfo.insertAdjacentHTML('beforeEnd', searchData);
 
@@ -48,5 +55,6 @@ request.onload = function () {
 //onload close
 };
 
-        request.open('GET', url, true);
-        request.send();
+request.open('GET', url, true);
+request.send();
+
