@@ -34,7 +34,7 @@ function searchForm(event) {
             if (ele) {
                 var gameInfo = document.querySelector("#searchResults");
                 var title = document.querySelector('#resultsInfo');
-                
+
                 console.log(data.streams.length);
 
                 var searchData='';

@@ -32,8 +32,8 @@ body{
 
 .logo{
   @extend %header;
-  height: 4rem;
-  width: 4rem;
+  height: 3rem;
+  width: 3rem;
   background: $logoicon;
   background-size: cover;
   text-indent: -9999px;
@@ -130,7 +130,7 @@ h1{
 h2{
   display: block;
   float: left;
-  margin-right: 400px;
+  margin-right: 60rem;
   margin-top: 4rem;
   padding: 5px;
   background-color: $bg-color;
