@@ -60,6 +60,28 @@ h1 {
   margin-left: auto;
   margin-right: auto; }
 
+.searchForm .append {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  float: left; }
+
+.searchForm input[type=text] {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  height: 5rem;
+  font-size: 3.5rem;
+  width: 80rem;
+  border: none; }
+
+.searchForm input[type=submit] {
+  text-indent: -9999px;
+  width: 5rem;
+  height: 5rem;
+  background: url("../images-icons/icons8-Search Filled.png") no-repeat white;
+  border: none; }
+
 .searchForm label {
   background-color: #000;
   font-size: 2rem;
@@ -68,27 +90,12 @@ h1 {
   border: 1px solid transparent;
   float: left; }
 
-.searchForm input[type=text] {
-  height: 5rem;
-  font-size: 3.5rem;
-  width: 80rem;
-  border: none;
-  float: left; }
-
-.searchForm input[type=submit] {
-  text-indent: -9999px;
-  width: 5rem;
-  height: 5rem;
-  background: url("../images-icons/icons8-Search Filled.png") no-repeat white;
-  border: none;
-  float: right; }
-
-.searchForm input[type=submit]:hover {
+.append input[type=submit]:hover {
   background: url("../images-icons/icons8-Search Filled-Hoverpng.png") no-repeat;
   width: 50px;
   height: 50px; }
 
-.searchForm #userFeedback {
+.append #userFeedback {
   color: red;
   float: left;
   font-size: 2rem;
@@ -107,11 +114,24 @@ h2 {
 #results {
   text-align: center; }
 
+#results #searchResults {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 120rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center; }
+
 .button {
   display: inline-block;
   text-align: center;
   font-size: 2rem;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   border-radius: 5px;
   background-color: #452D72;
   text-decoration: none;
@@ -122,13 +142,12 @@ h2 {
   background-color: #000; }
 
 article {
-  display: inline-block;
   margin: 39px;
-  max-width: 320px; }
+  max-width: 320px;
+  background-color: #452D72; }
 
 article a {
-  text-decoration: none;
-  background-color: #452D72; }
+  text-decoration: none; }
 
 article h3 {
   overflow: hidden;
@@ -138,7 +157,6 @@ article h3 {
 article h3 {
   font-size: 2rem;
   color: #C2A8F1;
-  background-color: #452D72;
   padding: 10px;
   text-align: left; }
 

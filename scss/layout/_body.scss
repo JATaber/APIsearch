@@ -84,6 +84,29 @@ h1{
 }
 
 .searchForm{
+  .append{
+    display: flex;
+    float: left;
+  }
+
+  input[type=text]{
+    flex:1;
+    height: 5rem;
+    font-size: $font-sizeH3;
+    width: 80rem;
+    border: none;
+  }
+
+  input[type=submit] {
+    text-indent: -9999px;
+    width: 5rem;
+    height: 5rem;
+    background: $search-btn white;
+    border: none;
+  }
+}
+
+.searchForm{
   label{
     background-color: $bg-color;
     font-size: $font-sizeP;
@@ -92,26 +115,9 @@ h1{
     border: 1px solid transparent;
     float: left;
   }
-
-  input[type=text]{
-    height: 5rem;
-    font-size: $font-sizeH3;
-    width: 80rem;
-    border: none;
-    float: left;
-  }
-
-  input[type=submit]{
-    text-indent: -9999px;
-    width: 5rem;
-    height: 5rem;
-    background: $search-btn white;
-    border: none;
-    float: right;
-  }
 }
 
-.searchForm{
+.append{
   input[type=submit]:hover{
     background: $search-btn-hover;
     width: 50px;
@@ -141,11 +147,21 @@ h2{
   text-align: center;
 }
 
+#results{
+  #searchResults{
+    display: flex;
+    width: 120rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+  }
+}
+
 .button {
   display: inline-block;
   text-align: center;
   font-size: $font-sizeP;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   border-radius: 5px;
   background-color: $article-bg-color;
   text-decoration: none;
@@ -159,15 +175,15 @@ h2{
 
 
 article{
-  display: inline-block;
   margin: 39px;
   max-width: 320px;
+  background-color: $article-bg-color;
 }
 
 article{
   a{
     text-decoration: none;
-    background-color: $article-bg-color;
+
   }
 
   %ellipsis{
@@ -179,7 +195,6 @@ article{
   h3{
     font-size: $font-sizeP;
     color: $light-font-color;
-    background-color: $article-bg-color;
     padding: 10px;
     text-align: left;
     @extend %ellipsis;

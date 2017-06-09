@@ -4,13 +4,13 @@
 }
 
 @mixin mq($size){
-  @if $size == small{
+  @if $size == mobile{
     @media (min-width: 300px){@content;}
   }
-  @else if $size == medium{
+  @else if $size == tablet{
     @media (min-width: 600px){@content;}
   }
-  @else if $size == large{
+  @else if $size == desktop{
     @media (min-width: 800px){@content;}
   }
 }
