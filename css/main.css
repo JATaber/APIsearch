@@ -19,33 +19,45 @@ body {
   font-family: Arial, sans-serif;
   background-color: #925FF1; }
 
-.logo, h1, .nav {
-  display: inline; }
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
 
-.logo {
+.header .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.header p {
   height: 3rem;
   width: 3rem;
   background: url("../images-icons/icons8-Game-ControllerFilled-50.png") no-repeat;
   background-size: cover;
   text-indent: -9999px;
-  position: absolute; }
+  margin: 5px 0 5px 5px; }
 
 h1 {
   color: #C2A8F1;
   font-size: 3rem;
-  margin-left: 50px;
-  padding-left: 10px; }
+  margin: 5px; }
 
 .nav {
-  float: right;
-  margin-right: 10px; }
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  list-style: none; }
 
 .nav li {
-  display: inline-block;
-  list-style-type: none;
   color: #C2A8F1;
   font-size: 3rem;
-  padding-left: 10px; }
+  margin: 5px; }
 
 .nav li:first-child {
   color: #907DB4; }

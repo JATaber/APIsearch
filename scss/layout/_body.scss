@@ -26,44 +26,43 @@ body{
   background-color: $body-bgColor;
 }
 
-%header{
-  display: inline;
+.header{
+  display: flex;
+  justify-content: space-between;
 }
 
-.logo{
-  @extend %header;
-  height: 3rem;
-  width: 3rem;
-  background: $logoicon;
-  background-size: cover;
-  text-indent: -9999px;
-  position: absolute;
+.header {
+  .logo{
+    display:flex;
+  }
+
+  p {
+    height: 3rem;
+    width: 3rem;
+    background: $logoicon;
+    background-size: cover;
+    text-indent: -9999px;
+    margin: 5px 0 5px 5px;
+  }
 }
-
-
 
 h1{
   color: $light-font-color;
   font-size: $font-h1-size;
-  margin-left: 50px;
-  padding-left: 10px;
-  @extend %header;
+  margin: 5px;
 }
 
-
 .nav{
-  @extend %header;
-  float: right;
-  margin-right: 10px;
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
 }
 
 .nav{
   li{
-    display: inline-block;
-    list-style-type: none;
     color: $light-font-color;
     font-size: $font-h1-size;
-    padding-left: 10px;
+    margin: 5px;
   }
 
   li:first-child{
