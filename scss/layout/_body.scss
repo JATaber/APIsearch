@@ -30,14 +30,9 @@ section{
   @extend header
 }
 
-footer{
-
-}
-
 body{
   font-family: $font-stack;
   background-color: $body-bgColor;
-  font-size: 16px;
 }
 
 .header{
@@ -49,8 +44,6 @@ body{
 }
 
 .header {
-
-  @include mq(desktop) {
     .logo {
       display: flex;
     }
@@ -63,7 +56,6 @@ body{
       text-indent: -9999px;
       margin: 5px 0 5px 5px;
     }
-  }
 }
 
 h1{
@@ -76,6 +68,14 @@ h1{
   display: flex;
   justify-content: flex-end;
   list-style: none;
+}
+
+.nav{
+  ul{
+    @include mq(mobile){
+
+    }
+  }
 }
 
 .nav{
@@ -95,8 +95,7 @@ h1{
 }
 
 .searchForm{
-  display: block;
-  width: 80%;
+  width: 100%;
   margin-top: 12rem;
   margin-left: auto;
   margin-right: auto;
@@ -111,9 +110,17 @@ h1{
   input[type=text]{
     flex:1;
     height: 5rem;
-    font-size: 16px;
+    font-size: 12px;
     width: 80%;
     border: none;
+
+    @include mq(tablet){
+      font-size: 16px;
+    }
+
+    @include mq(desktop){
+      font-size: $font-sizeP;
+    }
   }
 
   input[type=submit] {
@@ -127,40 +134,62 @@ h1{
 
 .searchForm{
   label{
+    font-size: 12px;
     background-color: $bg-color;
-    font-size: $font-sizeP;
     color: $light-font-color;
-    margin: 0 7rem 0 0;
 
+    @include mq(tablet){
+      font-size: 16px;
+    }
+
+    @include mq(desktop){
+    font-size: $font-sizeP;
+    }
   }
 }
 
-.append{
-  input[type=submit]:hover{
+.append {
+  input[type=submit]:hover {
     background: $search-btn-hover;
     width: 50px;
     height: 50px;
   }
+}
+#userFeedback{
+  color: red;
+  font-size: 12px;
+  background-color: black;
 
-  #userFeedback{
-    color: red;
-    float: left;
+  @include mq(tablet){
+    font-size: 16px;
+  }
+
+  @include mq(desktop){
     font-size: $font-sizeP;
-    background-color: black;
   }
 }
+
 
 
 h2{
   display: block;
   float: left;
-  margin-right: 60rem;
+  margin-right: auto;
   margin-top: 4rem;
   padding: 5px;
   background-color: $bg-color;
   color: $light-font-color;
-  font-size: $font-h1-size;
+  font-size: 16px;
+
+  @include mq(tablet){
+    font-size: 30px;
+  }
+
+  @include mq(desktop){
+    font-size: $font-sizeH2;
+  }
 }
+
 #results{
   text-align: center;
 }
@@ -168,7 +197,7 @@ h2{
 #results{
   #searchResults{
     display: flex;
-    width: 120rem;
+    width: 100%;
     flex-wrap: wrap;
     justify-content: center;
     align-content: center;
@@ -178,13 +207,22 @@ h2{
 .button {
   display: inline-block;
   text-align: center;
-  font-size: $font-sizeP;
+  font-size: 12px;
   margin-bottom: 40px;
+  margin-top: 20px;
   border-radius: 5px;
   background-color: $article-bg-color;
   text-decoration: none;
   color: $light-font-color;
   padding: 10px;
+
+  @include mq(tablet){
+    font-size: 16px;
+  }
+
+  @include mq(desktop){
+    font-size: $font-sizeP;
+  }
 }
 
 .button:hover{
@@ -192,10 +230,22 @@ h2{
 }
 
 
-article{
-  margin: 39px;
-  max-width: 320px;
+article {
+  display: flex;
+  margin: 10px 0;
   background-color: $article-bg-color;
+  width: 100%;
+
+
+  @include mq(tablet) {
+    margin: 10px;
+    flex-wrap: wrap;
+    max-width: calc(50% - 2.2rem);
+  }
+
+  @include mq(desktop) {
+    max-width: calc(33% - 2.2rem);
+  }
 }
 
 article{
@@ -205,9 +255,15 @@ article{
   }
 
   img{
-    width: 80px;
-    height: 45px;
+    width: 50%;
+    float: left;
+
+    @include mq(tablet){
+      width: 100%;
+      float: none;
+    }
   }
+
   %ellipsis{
     overflow: hidden;
     white-space: nowrap;
@@ -215,15 +271,35 @@ article{
   }
 
   h3{
-    font-size: $font-sizeP;
+    font-size: 12px;
     color: $light-font-color;
-    padding: 10px;
     text-align: left;
     @extend %ellipsis;
+    padding-bottom: 55px;
+
+    @include mq(tablet){
+      padding: 0;
+      float: none;
+      font-size: 20px;
+    }
+
+    @include mq(desktop){
+      float: none;
+      font-size: $font-sizeH3;
+      line-height: 75%;
+    }
   }
   strong{
-    font-size: $font-sizeP;
+    font-size: 12px;
     color: $dark-font-color;
+
+    @include mq(tablet){
+      font-size: 16px;
+    }
+
+    @include mq(desktop){
+      font-size: $font-sizeP;
+    }
   }
 }
 
@@ -238,22 +314,15 @@ article{
 }
 
 footer{
-  padding-top: 1.5rem;
-  font-size: $font-sizeP;
+  padding: 1.5rem 0;
+  font-size: 12px;
   text-align: center;
   color: $light-font-color;
-}
-
-footer{
   background-color: $bg-color;
-  height: 9.5rem;
   background-size: cover;
 }
 
 footer{
-  p{
-    margin-top: 1rem;
-  }
   a{
     color: $light-font-color;
   }
