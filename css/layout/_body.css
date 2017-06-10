@@ -1,54 +1,53 @@
-* {
-  margin: 0;
-  padding: 0; }
-
 html {
   font-size: 62.5%; }
 
-@media (max-width: 599px) {
+@media (min-width: 300px) {
   header, section {
-    max-width: 300px;
+    font-size: 1.6rem;
     margin-left: auto;
     margin-right: auto; } }
 
 @media (min-width: 600px) {
   header, section {
-    max-width: 600px;
+    max-width: 1200px;
     margin-left: auto;
     margin-right: auto; } }
 
-@media (min-width: 1200px) {
+@media (min-width: 800px) {
   header, section {
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto; } }
 
+@media (min-width: 800px) {
+  footer {
+    background-color: #000;
+    height: 9.5rem; } }
+
 body {
   font-family: Arial, sans-serif;
-  background-color: #925FF1;
-  font-size: 16px; }
+  background-color: #925FF1; }
 
-@media (min-width: 1200px) {
-  .header {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between; } }
+.header {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
 
-@media (min-width: 1200px) {
-  .header .logo {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex; }
-  .header p {
-    height: 3rem;
-    width: 3rem;
-    background: url("../images-icons/icons8-Game-ControllerFilled-50.png") no-repeat;
-    background-size: cover;
-    text-indent: -9999px;
-    margin: 5px 0 5px 5px; } }
+.header .logo {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+
+.header p {
+  height: 3rem;
+  width: 3rem;
+  background: url("../images-icons/icons8-Game-ControllerFilled-50.png") no-repeat;
+  background-size: cover;
+  text-indent: -9999px;
+  margin: 5px 0 5px 5px; }
 
 h1 {
   color: #C2A8F1;
@@ -56,12 +55,12 @@ h1 {
   margin: 5px; }
 
 .nav {
-  display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
   list-style: none; }
 
 .nav li {
@@ -77,23 +76,24 @@ h1 {
 
 .searchForm {
   display: block;
-  width: 80%;
+  width: 85rem;
   margin-top: 12rem;
   margin-left: auto;
   margin-right: auto; }
 
 .searchForm .append {
-  display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  float: left; }
 
 .searchForm input[type=text] {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
   height: 5rem;
-  font-size: 16px;
-  width: 80%;
+  font-size: 3.5rem;
+  width: 80rem;
   border: none; }
 
 .searchForm input[type=submit] {
@@ -105,9 +105,11 @@ h1 {
 
 .searchForm label {
   background-color: #000;
-  font-size: 1.6rem;
+  font-size: 2rem;
   color: #C2A8F1;
-  margin: 0 7rem 0 0; }
+  margin: 0 7rem 0 0;
+  border: 1px solid transparent;
+  float: left; }
 
 .append input[type=submit]:hover {
   background: url("../images-icons/icons8-Search Filled-Hoverpng.png") no-repeat;
@@ -117,13 +119,12 @@ h1 {
 .append #userFeedback {
   color: red;
   float: left;
-  font-size: 1.6rem;
+  font-size: 2rem;
   background-color: black; }
 
 h2 {
   display: block;
   float: left;
-  margin-right: 60rem;
   margin-top: 4rem;
   padding: 5px;
   background-color: #000;
@@ -134,22 +135,24 @@ h2 {
   text-align: center; }
 
 #results #searchResults {
-  display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   width: 120rem;
+  -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-wrap: wrap;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-content: center;
   -ms-flex-line-pack: center;
-      align-content: center; }
+  align-content: center; }
 
 .button {
   display: inline-block;
   text-align: center;
-  font-size: 1.6rem;
+  font-size: 2rem;
   margin-bottom: 40px;
   border-radius: 5px;
   background-color: #452D72;
@@ -168,23 +171,19 @@ article {
 article a {
   text-decoration: none; }
 
-article img {
-  width: 80px;
-  height: 45px; }
-
 article h3 {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis; }
 
 article h3 {
-  font-size: 1.6rem;
+  font-size: 2rem;
   color: #C2A8F1;
   padding: 10px;
   text-align: left; }
 
 article strong {
-  font-size: 1.6rem;
+  font-size: 2rem;
   color: #907DB4; }
 
 strong::before {
@@ -196,22 +195,12 @@ article h3:hover {
 
 footer {
   padding-top: 1.5rem;
-  font-size: 1.6rem;
+  font-size: 2rem;
   text-align: center;
   color: #C2A8F1; }
-
-footer {
-  background-color: #000;
-  height: 9.5rem;
-  background-size: cover; }
 
 footer p {
   margin-top: 1rem; }
 
 footer a {
   color: #C2A8F1; }
-
-.navWrapper {
-  height: 40rem;
-  background: url("../images-icons/Gaming_Zone.jpeg") no-repeat;
-  background-size: cover; }

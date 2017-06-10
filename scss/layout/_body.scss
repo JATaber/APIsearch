@@ -6,10 +6,24 @@ html{
 }
 
 header{
-  position: inherit;
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
+
+  @include mq(mobile){
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @include mq(tablet){
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @include mq(desktop) {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 section{
@@ -17,32 +31,38 @@ section{
 }
 
 footer{
-  background-color: $bg-color;
-  height: 9.5rem;
+
 }
 
 body{
   font-family: $font-stack;
   background-color: $body-bgColor;
+  font-size: 16px;
 }
 
 .header{
-  display: flex;
-  justify-content: space-between;
+
+  @include mq(desktop) {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .header {
-  .logo{
-    display:flex;
-  }
 
-  p {
-    height: 3rem;
-    width: 3rem;
-    background: $logoicon;
-    background-size: cover;
-    text-indent: -9999px;
-    margin: 5px 0 5px 5px;
+  @include mq(desktop) {
+    .logo {
+      display: flex;
+    }
+
+    p {
+      height: 3rem;
+      width: 3rem;
+      background: $logoicon;
+      background-size: cover;
+      text-indent: -9999px;
+      margin: 5px 0 5px 5px;
+    }
   }
 }
 
@@ -76,7 +96,7 @@ h1{
 
 .searchForm{
   display: block;
-  width: 85rem;
+  width: 80%;
   margin-top: 12rem;
   margin-left: auto;
   margin-right: auto;
@@ -85,14 +105,14 @@ h1{
 .searchForm{
   .append{
     display: flex;
-    float: left;
+
   }
 
   input[type=text]{
     flex:1;
     height: 5rem;
-    font-size: $font-sizeH3;
-    width: 80rem;
+    font-size: 16px;
+    width: 80%;
     border: none;
   }
 
@@ -111,8 +131,7 @@ h1{
     font-size: $font-sizeP;
     color: $light-font-color;
     margin: 0 7rem 0 0;
-    border: 1px solid transparent;
-    float: left;
+
   }
 }
 
@@ -185,6 +204,10 @@ article{
 
   }
 
+  img{
+    width: 80px;
+    height: 45px;
+  }
   %ellipsis{
     overflow: hidden;
     white-space: nowrap;
@@ -222,6 +245,12 @@ footer{
 }
 
 footer{
+  background-color: $bg-color;
+  height: 9.5rem;
+  background-size: cover;
+}
+
+footer{
   p{
     margin-top: 1rem;
   }
@@ -229,4 +258,3 @@ footer{
     color: $light-font-color;
   }
 }
-

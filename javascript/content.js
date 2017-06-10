@@ -23,7 +23,7 @@ request.onload = function () {
                 for (var i = 0; i < data.streams.length; i++)  {
                     searchData += '<article>';
                     searchData += '<a href="' + data.streams[i].channel.url + '" target="_blank">';
-                    searchData += '<img src=' + data.streams[i].preview.medium + ' alt="preview">';
+                    searchData += '<img src=' + data.streams[i].preview.large + ' alt="preview">';
                     searchData += '<h3>' + data.streams[i].channel.name + '<strong>' + data.streams[i].channel.game + '</strong></h3>';
                     searchData += '</a>';
                     searchData += '</article>';
