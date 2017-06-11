@@ -61,29 +61,40 @@ h1 {
     h1 {
       font-size: 3rem; } }
 
-.nav {
-  display: none;
+.navMenu {
+  float: right;
   position: relative;
-  list-style: none;
-  float: none;
-  background-color: black;
-  background-size: cover; }
-  @media (min-width: 600px) {
-    .nav {
-      display: flex;
-      position: relative;
-      justify-content: flex-end;
-      list-style: none; } }
-
-.nav li {
-  color: #C2A8F1;
-  font-size: 20px;
-  margin: 5px; }
-  @media (min-width: 600px) {
-    .nav li {
-      font-size: 3rem; } }
-.nav li:first-child {
-  color: #907DB4; }
+  display: inline-block; }
+  .navMenu .nav {
+    padding: 10px 5px 10px 0;
+    display: none;
+    position: absolute;
+    overflow: auto;
+    right: 0;
+    top: 40px;
+    list-style: none;
+    background-color: black;
+    background-size: cover; }
+    .navMenu .nav .show {
+      display: block; }
+    @media (min-width: 600px) {
+      .navMenu .nav {
+        display: flex;
+        top: 0;
+        position: relative;
+        justify-content: flex-end;
+        list-style: none; } }
+    .navMenu .nav li {
+      color: #C2A8F1;
+      font-size: 20px;
+      margin: 5px;
+      padding-left: 20px; }
+      @media (min-width: 600px) {
+        .navMenu .nav li {
+          font-size: 3rem;
+          padding: 0; } }
+    .navMenu .nav li:first-child {
+      color: #907DB4; }
 
 .searchForm {
   width: 100%;

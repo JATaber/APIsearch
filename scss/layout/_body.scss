@@ -83,39 +83,52 @@ h1{
   }
 }
 
-.nav{
-  display: none;
+.navMenu {
+  float: right;
   position: relative;
-  list-style: none;
-  float: none;
-  background-color: black;
-  background-size: cover;
+  display: inline-block;
 
-
-  @include mq(tablet){
-    display: flex;
-    position: relative;
-    justify-content: flex-end;
+  .nav {
+    padding: 10px 5px 10px 0;
+    display: none;
+    position: absolute;
+    overflow: auto;
+    right: 0;
+    top: 40px;
     list-style: none;
-  }
-}
+    background-color: black;
+    background-size: cover;
 
-.nav {
+    .show{
+      display: block;
+    }
+
+    @include mq(tablet) {
+      display: flex;
+      top: 0;
+      position: relative;
+      justify-content: flex-end;
+      list-style: none;
+    }
 
     li {
       color: $light-font-color;
       font-size: 20px;
       margin: 5px;
+      padding-left: 20px;
 
       @include mq(tablet){
         font-size: $font-h1-size;
+        padding: 0;
       }
     }
 
     li:first-child {
       color: $dark-font-color;
     }
+  }
 }
+
 
 .search{
   //height: 20rem;
