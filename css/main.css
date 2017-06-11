@@ -27,14 +27,23 @@ body {
   font-family: Arial, sans-serif;
   background-color: #925FF1; }
 
-@media (min-width: 1200px) {
-  .header {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between; } }
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
+.header .menu {
+  background-image: url("../images-icons/hamburger.png");
+  background-size: cover;
+  width: 30px;
+  height: 30px;
+  margin-top: 5px; }
+  @media (min-width: 600px) {
+    .header .menu {
+      display: none; } }
 
 .header .logo {
   display: -webkit-box;
@@ -55,13 +64,16 @@ h1 {
   margin: 5px; }
 
 .nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
   list-style: none; }
+  @media (min-width: 600px) {
+    .nav {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; } }
 
 .nav li {
   color: #C2A8F1;
@@ -71,14 +83,17 @@ h1 {
 .nav li:first-child {
   color: #907DB4; }
 
-.search {
-  height: 33.7rem; }
-
 .searchForm {
   width: 100%;
-  margin-top: 12rem;
+  margin-top: 5rem;
   margin-left: auto;
   margin-right: auto; }
+  @media (min-width: 600px) {
+    .searchForm {
+      margin-top: 7rem; } }
+  @media (min-width: 1200px) {
+    .searchForm {
+      margin-top: 10rem; } }
 
 .searchForm .append {
   display: -webkit-box;
@@ -265,6 +280,12 @@ footer a {
   color: #C2A8F1; }
 
 .navWrapper {
-  height: 40rem;
   background: url("../images-icons/Gaming_Zone.jpeg") no-repeat;
-  background-size: cover; }
+  background-size: cover;
+  height: 20rem; }
+  @media (min-width: 600px) {
+    .navWrapper {
+      height: 30rem; } }
+  @media (min-width: 1200px) {
+    .navWrapper {
+      height: 40rem; } }

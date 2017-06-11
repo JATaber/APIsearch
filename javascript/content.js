@@ -55,3 +55,11 @@ request.onload = function () {
 request.open('GET', url, true);
 request.send();
 
+function showMenu(){
+    document.getElementById("nav").classList.toggle("show");
+}
+
+button.onclick = function(e){
+
+}
+

@@ -2,8 +2,16 @@
 @import '../helpers/_variables.scss';
 
 .navWrapper {
-  height: 40rem;
   background: $backgroundImage;
   background-size: cover;
+  height: 20rem;
+
+  @include mq(tablet) {
+    height: 30rem;
+  }
+
+  @include mq(desktop){
+    height: 40rem;
+  }
 }
 

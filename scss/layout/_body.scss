@@ -36,10 +36,21 @@ body{
 }
 
 .header{
-
-  @include mq(desktop) {
     display: flex;
     justify-content: space-between;
+}
+
+.header{
+  .menu{
+    background-image: url('../images-icons/hamburger.png');
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+    margin-top: 5px;
+
+    @include mq(tablet){
+      display: none;
+    }
   }
 }
 
@@ -65,40 +76,47 @@ h1{
 }
 
 .nav{
-  display: flex;
+  display: none;
+  //display: flex;
   justify-content: flex-end;
   list-style: none;
+
+
+  @include mq(tablet){
+    display: flex;
+  }
 }
 
-.nav{
-  ul{
-    @include mq(mobile){
+.nav {
 
+    li {
+      color: $light-font-color;
+      font-size: $font-h1-size;
+      margin: 5px;
     }
-  }
-}
 
-.nav{
-  li{
-    color: $light-font-color;
-    font-size: $font-h1-size;
-    margin: 5px;
-  }
-
-  li:first-child{
-    color: $dark-font-color;
-  }
+    li:first-child {
+      color: $dark-font-color;
+    }
 }
 
 .search{
-  height: 33.7rem;
+  //height: 20rem;
 }
 
 .searchForm{
   width: 100%;
-  margin-top: 12rem;
+  margin-top: 5rem;
   margin-left: auto;
   margin-right: auto;
+
+  @include mq(tablet){
+    margin-top: 7rem;
+  }
+
+  @include mq(desktop){
+    margin-top: 10rem;
+  }
 }
 
 .searchForm{
