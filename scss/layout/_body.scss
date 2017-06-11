@@ -42,7 +42,7 @@ body{
 
 .header{
   .menu{
-    background-image: url('../images-icons/hamburger.png');
+    background-image: url('../images-icons/hamburgerMenu.png');
     background-size: cover;
     width: 30px;
     height: 30px;
@@ -77,13 +77,11 @@ h1{
 
 .nav{
   display: none;
-  //display: flex;
-  justify-content: flex-end;
-  list-style: none;
-
 
   @include mq(tablet){
     display: flex;
+    justify-content: flex-end;
+    list-style: none;
   }
 }
 

@@ -30,7 +30,7 @@ body {
   justify-content: space-between; }
 
 .header .menu {
-  background-image: url("../images-icons/hamburger.png");
+  background-image: url("../images-icons/hamburgerMenu.png");
   background-size: cover;
   width: 30px;
   height: 30px;
@@ -55,12 +55,12 @@ h1 {
   margin: 5px; }
 
 .nav {
-  display: none;
-  justify-content: flex-end;
-  list-style: none; }
+  display: none; }
   @media (min-width: 600px) {
     .nav {
-      display: flex; } }
+      display: flex;
+      justify-content: flex-end;
+      list-style: none; } }
 
 .nav li {
   color: #C2A8F1;
