@@ -30,11 +30,15 @@ body {
   justify-content: space-between; }
 
 .header .menu {
+  display: block;
   background-image: url("../images-icons/hamburgerMenu.png");
+  background-color: transparent;
+  border: none;
   background-size: cover;
-  width: 30px;
-  height: 30px;
-  margin-top: 5px; }
+  width: 3rem;
+  height: 3rem;
+  margin-top: 10px;
+  float: right; }
   @media (min-width: 600px) {
     .header .menu {
       display: none; } }
@@ -50,22 +54,34 @@ body {
   margin: 5px 0 5px 5px; }
 
 h1 {
+  margin: 10px;
   color: #C2A8F1;
-  font-size: 3rem;
-  margin: 5px; }
+  font-size: 20px; }
+  @media (min-width: 600px) {
+    h1 {
+      font-size: 3rem; } }
 
 .nav {
-  display: none; }
+  display: none;
+  position: relative;
+  list-style: none;
+  float: none;
+  background-color: black;
+  background-size: cover; }
   @media (min-width: 600px) {
     .nav {
       display: flex;
+      position: relative;
       justify-content: flex-end;
       list-style: none; } }
 
 .nav li {
   color: #C2A8F1;
-  font-size: 3rem;
+  font-size: 20px;
   margin: 5px; }
+  @media (min-width: 600px) {
+    .nav li {
+      font-size: 3rem; } }
 .nav li:first-child {
   color: #907DB4; }
 

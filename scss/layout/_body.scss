@@ -42,11 +42,15 @@ body{
 
 .header{
   .menu{
+    display: block;
     background-image: url('../images-icons/hamburgerMenu.png');
+    background-color: transparent;
+    border: none;
     background-size: cover;
-    width: 30px;
-    height: 30px;
-    margin-top: 5px;
+    width: 3rem;
+    height: 3rem;
+    margin-top: 10px;
+    float: right;
 
     @include mq(tablet){
       display: none;
@@ -70,16 +74,27 @@ body{
 }
 
 h1{
+  margin: 10px;
   color: $light-font-color;
-  font-size: $font-h1-size;
-  margin: 5px;
+  font-size: 20px;
+
+  @include mq(tablet) {
+    font-size: $font-h1-size;
+  }
 }
 
 .nav{
   display: none;
+  position: relative;
+  list-style: none;
+  float: none;
+  background-color: black;
+  background-size: cover;
+
 
   @include mq(tablet){
     display: flex;
+    position: relative;
     justify-content: flex-end;
     list-style: none;
   }
@@ -89,8 +104,12 @@ h1{
 
     li {
       color: $light-font-color;
-      font-size: $font-h1-size;
+      font-size: 20px;
       margin: 5px;
+
+      @include mq(tablet){
+        font-size: $font-h1-size;
+      }
     }
 
     li:first-child {
